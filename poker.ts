@@ -21,14 +21,14 @@ const cardsNumbers: TPokerNumbers[] = [
 
 const start = () => {
   const deckInitialised = initialiseDeck();
+  const swappedDeck = swapCards(deckInitialised, 1, 10);
+  const shuffledDeck = shuffle(swappedDeck);
   console.log(
     "deckInitialised: length:",
     deckInitialised.length,
     deckInitialised
   );
-  const swappedDeck = swapCards(deckInitialised, 1, 10);
   console.log("swappedDeck: length:", swappedDeck.length, swappedDeck);
-  const shuffledDeck = shuffle(swappedDeck);
   console.log("shuffledDeck: length:", shuffledDeck.length, shuffledDeck);
 };
 
